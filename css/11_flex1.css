@@ -1,0 +1,59 @@
+.flex-container{
+    height: 700px;
+    background-color: #ccc;
+
+    /* flex container 로 지정 */
+    display: flex;
+    
+    /* --- flex decoration --- */
+
+    /* 중심축 뱡향 (기본값 row) */
+    flex-direction: row;
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+
+
+    /* --- justify-content 중심축 방향 item 정렬 (rlqhsrkqt: flex-start) --- */
+    /*  */
+
+    justify-content: flex-start;
+
+    /* 오른쪽 정렬 ( 마지막 item이 오른쪽에 있다) */
+    justify-content: flex-end;
+
+    justify-content: center;
+
+    /* 모든 item 양쪽에 동일한 여백 부여 */
+    justify-content: space-around;
+
+    /* 모든 item 사이에 동일한 여백 부여 */
+    justify-content: space-evenly;
+    
+    /* 모든 item 사이에 동일한 여백 부여, 양끝은 붙어있다 */
+    justify-content: space-between;
+
+
+    /* --- align-items 교차축 방향 item 정렬 (기본값: strech) --- */
+
+    /* strech 확인시 item에 교차축 방향 크기 속성 미지정 필요 */
+    align-items: stretch;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+
+    align-items: baseline;
+
+}
+
+.item2{
+    padding: 5px;
+}
+.item3{
+    padding: 10px;
+}
+.item4{
+    padding: 15px;
+}
+.item5{
+    padding: 20px;
+}

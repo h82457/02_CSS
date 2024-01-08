@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div{
+    border: 1px solid black;
+}
+
+/* 감싸는 요소 */
+.container-1{
+    width: 304px;
+    height: 304px;
+    border: 2px solid black;
+    margin: 30px;
+
+    /* 기준을 설정 */
+    position: relative;
+}
+
+.first{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(207, 207, 91);
+
+    /* 요소들이 아래로 가려짐 */
+    position: absolute;
+}
+
+.second{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(43, 112, 43);
+    position: absolute;
+
+    /* 기준요소 왼쪽 벽으로부터 50px 만큼 떨어진 위치 (기준: container-1, relative)) */
+    left: 50px;
+    top: 50px;
+}
+
+.third{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(230, 144, 74);
+    position: absolute;
+/*     기준요소 오른쪽 벽으로부터 50px 만큼 떨어진 위치 */
+    right: 100px;
+    /* 기준점으로 지정하면 밖으로도 배치 가능 (음수, 양수 모두 가능) */
+    bottom: 100px;
+
+    z-index: 10;
+}
+
+/* ---position, margin:aut0 이용해서 요소를 정가운데 배치하기 --- */
+.container-2{
+    width: 486px;
+    height: 272px;
+    position: relative; /* 기준 */
+}
+
+.center{
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+    border-radius: 50%;
+    /* 다른 요소와의 간격을 자동으로 설정 -> 가운데 정렬 */
+    /* div 한줄 내에서 가운데 정렬됨 */
+    margin: auto;
+    position: absolute;
+
+    /* top, left가 더 우선권을 가짐 */
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    /* 기준점 설정 -> 동일한 힘으로 잡아당겨서 margin: auto 시 가운데 정렬됨 */
+}
+
+.fixed-area{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: rgb(255, 255, 255);
+}
+.fixed-area > a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+
+    /* 글자 정렬 속성 */
+    text-align: center;
+
+    /* 장평 설정 속성 */
+    line-height: 35px;
+
+    text-decoration: none;
+    color: black;
+ /*    글꼴 두께 설정 */
+    font-weight: bold;
+    user-select: none;
+}
+
+/* --- sticky --- */
+.tittle{
+    background-color: rgb(78, 80, 82);
+    color: wheat;
+    padding: 100px 20px 30px;
+    /* 요소가 화면을 벗어나면 지정된 위치에 고정 */
+    position: sticky;
+    /* 위치지정 */
+    top: -70px;
+    /* z축 방향으로 올라와있는 순서(정도) 지정 */
+    z-index: 1000;
+}
+
+
+
