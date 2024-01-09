@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/99_main.css">
+
+    <title>creamchoux</title>
+
+    <script src="https://kit.fontawesome.com/8affe1c744.js" crossorigin="anonymous"></script>
+
+    <script src='../fullcalendar-6.1.10/dist/index.global.js'></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+      
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialDate: '2024-01-12',
+            editable: true,
+            selectable: true,
+            businessHours: true,
+            dayMaxEvents: true, // allow "more" link when too many events
+            events: [
+            {
+                title: '예약 마감',
+                start: '2024-01-03',
+                end: '2024-01-10'
+            },
+            {
+                title: '휴무',
+                start: '2024-01-13',
+                end: '2024-01-15'
+            }
+
+            ]
+          });
+      
+          calendar.render();
+        });
+    </script>
+</head>
+<body>
+
+
+    <!-- 로고 -->
+    <header>
+        <div class="header-container">
+            <div class="logo"></div>
+        </div>
+    </header>
+
+    <!-- 메뉴 -->
+    <nav>
+        <ul class="navbar">
+            <li> <a href="#">creamchoux</a> </li>
+            <li> <a href="#">notice</a> </li>
+            <li> <a href="#">reservation</a> </li>
+            <li> <a href="#"><i class="fa-solid fa-cake-candles"></i></a> </li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- 배너 -->
+        <section class="banner-container">
+            <div class="banner"></div>
+        </section>
+
+        <section class="reserv-container">
+
+            <!-- 예약 달력 -->
+            <div class="calendar" id="calendar"></div>
+
+            <!-- 예약 -->
+            <div class="reserv"><p>예약 및 연락은 카카오톡 친구추가로만 받습니다.</p></div>
+
+
+        </section>
+
+
+x
+    </main>
+    <article></article>
+    <footer></footer>
+</body>
+</html>
