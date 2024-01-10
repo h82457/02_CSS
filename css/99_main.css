@@ -1,20 +1,27 @@
 :root{
-    --main-color : rgb(61, 11, 11);
+    /* background-color: #ffe4c4; */
+    --main-color : #3d0b0b;
+    --main-bg-color: #faebd7;
+    --main-bg-color1: #f7e1c4;
+    --main-bg-color2: #f8d5ab;
 
+    
 }
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
-    border: 0.5px solid rgb(136, 131, 131); 
+    /* border: 0.5px solid rgb(136, 131, 131); */
+    color: var(--main-color);
+    border-color: var(--main-color);
+    font-family: 'SOYOMapleBoldTTF';
 
 }
 
 a{
-    color : black;
-    text-decoration: none; /* 밑줄 제거 */
+    color : var(---main-color);
+    text-decoration: none;
 }
 
 ul{
@@ -59,7 +66,7 @@ body{
     display: flex;
     justify-content: center;
 
-    background-color: antiquewhite;
+    background-color: var(--main-bg-color1);
 }
 
 .navbar > li{
@@ -73,7 +80,6 @@ body{
 .navbar > li > a{
     font-size: 1em;
     font-weight: bold;
-    font-family: 'SOYOMapleBoldTTF';
     color: var(--main-color);
     padding: 3px 20px;
     text-align: center; 
@@ -105,7 +111,7 @@ main{
     display: flex;
     justify-content: center;
     background-image: url(../images/img/banner1.jpeg);
-    background-size: auto 200%;
+    background-size: auto 300%;
     background-repeat: no-repeat; 
     background-position: center;
 
@@ -113,28 +119,183 @@ main{
 
 /* ------------ 예약 달력 / 예약 ------------ */
 .reserv-container{
-    height: 150px;
-    padding: 10px;
+    height: 300px;
+    margin-top: 10px;
+    padding: 20px 10px;
     display: flex;
     flex-direction: row;
-
+    background-color: var(--main-bg-color);
 
 }
-
-.reserv-container > div {
-    width: 50%;
-    /* flex-shrink: 0; */
-}
-
 
 #calendar {
-    height: auto 150px;
-    margin: 0 auto;
+    width: 30%;
+    height: 280px;
+    margin: 0 10%;
     object-fit: contain;
+    align-content: start;
     
+}
+.fc .fc-button-primary {
+    background-color: var(--main-bg-color2);
+    border-color: var(---main-color);
+    color: var(--main-color); */
+}
+
+.fc .fc-button-primary:disabled {
+    background-color: var(--main-bg-color2);
+    border-color: var(--main-color);
+    color: var(--main-color);
+}
+.fc .fc-daygrid-more-link {
+    visibility: hidden;
+}
+.fc .fc-toolbar.fc-header-toolbar {
+    margin-bottom: 0.6em;
+}
+.fc table {
+    font-size: 0.8em;
+}
+.fc .fc-view-harness {
+    position: relative;
+}
+
+.reserv{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.reserv-container > .reserv-text{
+    width: 100%;
+    height: 100%;
+    padding: 15% 30%;
+}
+
+#reserv-pre-text{
+    line-height: 30px;
+}
+.reserv-button{
+    text-align: right;
+}
+.reserv-button > button{
+    width: 15em;
+    font-size: 18px;
+    border-radius:5px; 
+    border: 2px solid var(--main-bg-color2);
+    background-color: var(--main-bg-color2);
+    color: var(--main-color);
+    margin: 9px;
+    padding: 15px 25px;
+}
+
+.reserv-button > button:hover{
+    background-color: #ffcd90;
+}
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    min-width: 800px;
+    max-width: 1440px;
+    margin: auto;
+  }
+  
+  /* 내용 행 */
+  .content-row{
+    margin: 5% 0;
+    display: flex;
+  }
+  
+  /* 썸네일 열 */
+  .thumbnail-col{
+    width: 400px;
+    flex-shrink: 0;
+  }
+  
+  /* 썸네일 이미지 */
+  .thumbnail{
+    width: 100%;
+    height: auto;
+  }
+
+  .card-container{
+    flex-wrap: wrap;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  /* 카드를 감싸는 요소(flex의 item) */
+  .card-item{
+    flex-shrink: 0;
+    width: 21.85%;
+    min-width: 200px; 
+    padding: 30px 20px;
+    margin: 20px;
+    border-radius: 5%;
+    background-color: var(--main-bg-color1);
+    min-width: 200px; 
+  }
+  
+  /* 카드 썸네일 */
+ .card-thumbnail-container{
+    height: auto;
+  }
+  
+  .card-thumbnail{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 3%;
+  }
+  
+  .card-item:hover{
+    background-color: var(--main-bg-color2);
+    border: 3px solid var(--main-bg-color2);
+  }
+  
+
+/* 더보기 버튼 */
+.board-button{
+    text-align: center;
+}
+.board-button > button{
+    width: 15em;
+    font-size: 18px;
+    border-radius:5px; 
+    border: 2px solid var(--main-bg-color2);
+    background-color: var(--main-bg-color2);
+    color: var(--main-color);
+    margin: 9px;
+    padding: 15px 25px;
+}
+
+.board-button > button:hover{
+    background-color: #ffcd90;
 }
 
 
+  
+
+  footer{
+
+    flex-grow: 0;
+    flex-shrink: 0;
+  
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer label{
+    font-weight: bold;
+    padding: 30px;
+  }
 
 
 

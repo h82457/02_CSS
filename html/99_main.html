@@ -50,7 +50,7 @@
     </header>
 
     <!-- 메뉴 -->
-    <nav>
+    <nav class="nav">
         <ul class="navbar">
             <li> <a href="#">creamchoux</a> </li>
             <li> <a href="#">notice</a> </li>
@@ -65,21 +65,71 @@
             <div class="banner"></div>
         </section>
 
+        <!-- 예약 (달력, 예약 안내) -->
         <section class="reserv-container">
 
             <!-- 예약 달력 -->
             <div class="calendar" id="calendar"></div>
 
             <!-- 예약 -->
-            <div class="reserv"><p>예약 및 연락은 카카오톡 친구추가로만 받습니다.</p></div>
+            <div class="reserv">
+                <div class="reserv-text">
+                    <label id="reserv-pre-text">
+                        🎂케이크예약 카톡플친 - 크림슈<br>
+                        🏡시흥시 능곡군자로50 풍경프라자 7층 702호 크림슈<br>
+                        ⏰️OPEN 월~토 11:00~20:00<br>
+                        매주 일요일휴무<br>
+                        ☎️070.1234.5678<br>
+                        <a href="#">pf.kakao.com/_Tsdfexfj</a>
+                    </label>
+                </div>             
+                <div class="reserv-button">
+                    <button>예약 문의</button>
+                </div>
+            </div>
 
 
         </section>
-
-
-x
+ 
+        <!-- 카드 형태 요소를 모아둔 행 -->
+        <div class="content-row card-container">
+            <div class="card-item">
+                <a href="#" class="card">
+                  <div class="card-thumbnail-container">
+                    <img class="card-thumbnail" src="../images/img/card1.jpg" alt="카드 썸네일">
+                  </div>
+            </div>
+            <div class="card-item">
+                <a href="#" class="card">
+                  <div class="card-thumbnail-container">
+                    <img class="card-thumbnail" src="../images/img/card2.jpg" alt="카드 썸네일">
+                  </div>
+            </div>
+            <div class="card-item">
+                <a href="#" class="card">
+                  <div class="card-thumbnail-container">
+                    <img class="card-thumbnail" src="../images/img/card3.jpg" alt="카드 썸네일">
+                  </div>
+            </div>
+            <div class="card-item">
+                <a href="#" class="card">
+                  <div class="card-thumbnail-container">
+                    <img class="card-thumbnail" src="../images/img/card2.jpg" alt="카드 썸네일">
+                  </div>
+                </div>
+                </div>
+            <div class="board-button">
+                <button>더보기</button>
+            </div>
     </main>
-    <article></article>
-    <footer></footer>
+
+    <footer>
+		<article>
+      <label>회사 소개</label>    
+      <label>이용약관</label>    
+      <label>개인정보처리방침</label>    
+      <label>고객센터</label>    
+		</article>
+    </footer>
 </body>
 </html>
